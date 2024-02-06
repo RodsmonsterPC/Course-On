@@ -1,0 +1,97 @@
+
+.box{
+    position: relative;
+    width: 500px;
+    height: 200px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 100px;
+    box-shadow: -12px 6px;
+}
+.box::after{
+    content: '';
+    position:absolute;
+    inset: 4px;
+    // background-color: rgb(0, 194, 0);
+    background-color: #4AD06F;
+    border-radius: 150px;
+    animation-name: color;
+    animation-duration: 4s;
+    animation-timing-function: 10s;
+}
+@keyframes color {
+    0%{
+    background-color: #282c34;
+    }
+    100%{
+    background-color: #4AD06F;
+    }
+}
+@media (max-width:425px){
+    .box{
+        width:266px;
+        height:111px;
+        font-size:9px;
+    }
+    .boxOn{
+        left:191px;
+        width:142.5px;
+        height:144.5px;
+        background-color:black;
+    }
+}
+.h2{
+    left: 13px;
+    position:relative;
+    color:#fff;
+   font-size: 5em;
+   z-index: 10;
+   animation-name: course;
+   animation-duration: 6s;
+   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes course {
+    0%{
+        color:#282c34;
+        
+    }
+    100%{
+        color: #fff;
+
+    }
+}
+.boxOn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190.50px;
+    width: 199.50px;
+    left: 300px;
+    background-color:white;
+    border-radius:100px;
+    z-index: 10;
+    animation-name: slash;
+    position:absolute;
+    animation-duration: 4s;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: -7px 2px;
+}
+@keyframes slash {
+    0%{
+        background-color: #282c34;
+        left:0px;
+        position:absolute;
+        // animation-duration: 6s;
+    }
+    100%{
+        right: 200px;
+    }
+}
+.on{
+    position:relative;
+   font-size: 5em;
+    color:black;
+}
